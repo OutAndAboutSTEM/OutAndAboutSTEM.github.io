@@ -40,7 +40,8 @@ h4{
   text-align: center;
   line-height: 2em;
   color: #b8ace5;
-
+  animation: moveInBottom .5s ease-out .75s; /*calls our moveInBottom animation so that the button AND its after pseudoelement come in from the bottom and fade in after .75 seconds- we have this in a new class to ensure it only happens to this button and not other buttons*/
+  animation-fill-mode: backwards;
 }
 
 h2{
@@ -115,6 +116,23 @@ h2{
   left:50%;
   transform: translate(-50%, -50%); /*we use transofrm trnaslate to tell it to shift it 50% of its own height and width so that position absolute will work properly- so this is in realtion to itself and NOT the parent element */
   text-align: center; /*This is the simplest way to ensure our button (which is a text link formatted as a button) will sit in the middle of the page!*/
+}
+
+@keyframes moveInBottom{
+  0%{
+      opacity:0;
+      transform: translateY(100px);/* you can also use things like rotate etc.*/
+  }
+
+  80%{
+      opacity:0.8;
+      transform: translateY(-15px);
+  }
+
+  100%{
+      opacity:1;
+      transform: translate(0);
+  }
 }
 
 @media only screen and (max-width: 850px){
