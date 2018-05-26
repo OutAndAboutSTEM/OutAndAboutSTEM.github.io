@@ -8,15 +8,49 @@ body{
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.7; /*line height is 1.7x bigger than predefined line height*/
-  color: #777;
-  padding: 30px; /*gives the white border around the page, I think margin also seems to work here?*/
+  padding: 0; /*gives the white border around the page, I think margin also seems to work here?*/
 }
 
+.navbar-custom{
+  background-color: black;
+  border-color: #001e60;
+}
 
+.navbar-custom .navbar-nav > li > a {
+    color:white;
+}
+
+.navbar-custom .container a {
+  color:white;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a,
+.navbar-custom .navbar-nav > .active > a {
+    background: white;
+    color: black;
+}
+
+h4{
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 2em;
+  color: #b8ace5;
+
+}
+
+h2{
+  text-align: center;
+
+}
 
 .header{ /*the part with the yoga image and green overlay*/
-  height: 50vh; /*we want the height of the element to be 95% of the viewport*/
+  transform: translate(0%, -40px); /*we use transofrm trnaslate to tell it to shift it 50% of its own height and width so that position absolute will work properly- so this is in realtion to itself and NOT the parent element */
+
+  height: 50vh; /*we want the height of the element to be 50% of the viewport*/
   background-image: linear-gradient(
     to right bottom, /*adds a linear gradient on top going left top to right bottom...*/
     rgba(255, 255, 255, 0.8), /*...specifies the colours and opacity...*/
@@ -51,84 +85,11 @@ body{
   text-align: center; /*This is the simplest way to ensure our button (which is a text link formatted as a button) will sit in the middle of the page!*/
 }
 
-.heading-primary{
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden; /*The animation makes the title shake upwards a little, it's not v noticable and no-one really knows why it happens, but this css will fix it! This is usually used if you're eg. rotating an element, the back part of the element will be have visible. You can use this to stop that from happening */
-  margin-bottom: 60px;/*adds some whitespace between the h1 and the button*/
+@media only screen and (max-width: 850px){
+  img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
-.heading-primary-main{
-    display: block; /* using this on the spans so that they'll stack on top of one another rather than being side by side*/
-    animation-name: moveInLeft;
-    animation-duration: 1.5s; /*you call the animation with animation name, and then give it a duration to last over */
-    animation-timing-function: ease-out; /* makes the animation start faster and get slower*/
-    /* for ease, this can also be written as..
-    animation: moveInLeft 1.5s ease-out;
-    */
-
-    /*
-    animation-delay: 1s; allows an animation to start later after the page has loaded
-    animation-iteration-count: 3; allows you to keep repeating an animation for the number fo times you type in
-    animation-timing-function: ease-in; makes the animation start more slowly and speed up (there are lots of other options for this that you can look up)
-    */
-}
-
-.heading-primary-sub{
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17.4px;
-    animation-name: moveInRight;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
-}
-
-
-/*Stuff for the Button in the header*/
-
-.btn:link,
-.btn:visited{ /*Because the button is also a link, we need to use btn:link, link is a pseudoclass here, which means its a special state of the selector, so link is the state of the button. we use them to style elements under a special condition, such as :hover or :visited*/
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  display: inline-block;/*ALWAYS do this if you're going to give an element padding, a width or height. This allows the box model to treat is as a normal block element rather than inline text*/
-  border-radius:50px;
-  transition: all .2s; /*Can use this for our simple up and down button animation rather than keyframes, it'll just give a nice transition to our transformations so it looks smooth and less abrupt. It isn't really intuitive that it has to be in the initial state rather than the animated state (eg. btn:hover), but that's just the way it is so get over it*/
-  position: relative;
-}
-
-.btn-white{
-  background-color: white;
-  color:#777;
-  
-}
-
-.btn:hover{
-  transform:translateY(-3px);/*So that the button will go up a small bit when you hover on it*/
-  box-shadow: 0 10px 20px rgba(0,0,0,.2); /*This is doing x y blur,a nd then the colour- so we want no shadow in the x direction, 10px of shadow in y direction, and for it to be quite blurry. making the opacity 0.2 makes it more subtle*/
-}
-
-.btn:active{ /*when it is being clicked*/
-  transform: translateY(-1px); /*This is moving it from its default START position, not where it is when you're hovering over it, so it will actually appear to go down 2px when you hover then press*/
-  box-shadow: 0 5px 10px rgba(0,0,0,.4); /*We're making it a smaller and less blurry shadow so that it looks like the button had been pushed down*/
-}
-
-
-
-@keyframes moveInBottom{
-    0%{
-        opacity:0;
-        transform: translateY(100px);/* you can also use things like rotate etc.*/
-    }
-
-    100%{
-        opacity:1;
-        transform: translate(0);
-    }
-}
-
-.btn-animated{
-  animation: moveInBottom .5s ease-out .75s; /*calls our moveInBottom animation so that the button AND its after pseudoelement come in from the bottom and fade in after .75 seconds- we have this in a new class to ensure it only happens to this button and not other buttons*/
-  animation-fill-mode: backwards; /*this is nifty!! it applies the 0% animation state (ie opacity of 0) before the animation starts, so we can't see it for the .75s delay before it animates!*/
 }
