@@ -47,14 +47,18 @@ h2{
 
 }
 
+.text{
+  margin: 10px 20%;
+}
+
 .header{ /*the part with the yoga image and green overlay*/
   transform: translate(0%, -40px); /*we use transofrm trnaslate to tell it to shift it 50% of its own height and width so that position absolute will work properly- so this is in realtion to itself and NOT the parent element */
 
   height: 50vh; /*we want the height of the element to be 50% of the viewport*/
   background-image: linear-gradient(
     to right bottom, /*adds a linear gradient on top going left top to right bottom...*/
-    rgba(255, 255, 255, 0.8), /*...specifies the colours and opacity...*/
-    rgba(255, 255, 255, 0.8)),
+    rgba(255, 255, 255, 0.6), /*...specifies the colours and opacity...*/
+    rgba(255, 255, 255, 0.6)),
     url(../images/colors.jpeg);  /*...and the. url image underneath it peaking through*/
   background-size: cover;
   background-position: top; /*background-position: top ensure the top of the background always stays flush with the top of the container, it doesn't disappear when you resize the window*/
