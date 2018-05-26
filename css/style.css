@@ -47,6 +47,18 @@ h2{
   text-decoration: none;
 }
 
+#pink{
+  color:#d773e0;
+}
+
+#blue{
+  color:#74a8e0;
+}
+
+#green{
+  color:#73d861;
+}
+
 .text{
   margin: 10px 20%;
 }
