@@ -11,6 +11,7 @@ body{
   padding: 0; /*gives the white border around the page, I think margin also seems to work here?*/
 }
 
+
 .navbar-custom{
   background-color: black;
   border-color: #001e60;
@@ -45,6 +46,15 @@ h4{
 h2{
   text-align: center;
   text-decoration: none;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.center{
+  margin: 10px auto;
+  width: 500px;
 }
 
 #pink{
@@ -92,6 +102,12 @@ h2{
   margin:40px;
 }
 
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
 
 .text-box{
   position: absolute; /*we have to be careful: you might think that 50% top and left will center it, but actually, this will center the left edge of the text box and not the middle of the text box!! */
