@@ -41,6 +41,14 @@ body{
   transition:.5s;
 }
 
+h3{
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 2em;
+  color: #b8ace5;
+  margin-bottom: 0px;
+}
+
 h4{
   letter-spacing: 2px;
   text-align: center;
@@ -136,6 +144,16 @@ iframe{
   width: 80px;
   display: block;
   margin: 0 18% 20px 82%;
+}
+
+#oas{
+    max-width: auto;
+    height: 250px;
+    margin-top: 20px;
+}
+
+#lgbtstemday{
+  margin: 20px 0px 20px 0px;
 }
 
 .btn-purple{
