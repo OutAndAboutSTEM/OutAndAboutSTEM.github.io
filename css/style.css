@@ -184,5 +184,10 @@ iframe{
     height: auto;
     width: auto\9; /* ie8 */
 }
+}
 
+@media only screen and (max-width: 750px){
+  #US {
+    width:50px;
+}
 }
