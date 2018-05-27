@@ -62,18 +62,6 @@ iframe{
   width: 500px;
 }
 
-#pink{
-  color:#d773e0;
-}
-
-#blue{
-  color:#74a8e0;
-}
-
-#green{
-  color:#73d861;
-}
-
 .text{
   margin: 10px 20%;
 }
@@ -121,6 +109,51 @@ iframe{
   transform: translate(-50%, -50%); /*we use transofrm trnaslate to tell it to shift it 50% of its own height and width so that position absolute will work properly- so this is in realtion to itself and NOT the parent element */
   text-align: center; /*This is the simplest way to ensure our button (which is a text link formatted as a button) will sit in the middle of the page!*/
 }
+
+iframe{
+  transform: translate(0%, -20px); /*we use transofrm trnaslate to tell it to shift it 50% of its own height and width so that position absolute will work properly- so this is in realtion to itself and NOT the parent element */
+}
+
+.btn:link,
+.btn:visited{ /*Because the button is also a link, we need to use btn:link, link is a pseudoclass here, which means its a special state of the selector, so link is the state of the button. we use them to style elements under a special condition, such as :hover or :visited*/
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: block;/*ALWAYS do this if you're going to give an element padding, a width or height. This allows the box model to treat is as a normal block element rather than inline text*/
+  border-radius:50px;
+  transition: all .2s; /*Can use this for our simple up and down button animation rather than keyframes, it'll just give a nice transition to our transformations so it looks smooth and less abrupt. It isn't really intuitive that it has to be in the initial state rather than the animated state (eg. btn:hover), but that's just the way it is so get over it*/
+  position: relative;
+  color: white;
+}
+
+#US{
+  width: 80px;
+  display: block;
+  margin: 0 18% 20px 82%;
+}
+
+.btn-purple{
+  background-color: #832fa8;
+  color:white;
+  display: block;
+  width: 200px;
+}
+
+.btn:hover{
+  transform:translateY(-3px);/*So that the button will go up a small bit when you hover on it*/
+  box-shadow: 0 10px 20px rgba(0,0,0,.2); /*This is doing x y blur,a nd then the colour- so we want no shadow in the x direction, 10px of shadow in y direction, and for it to be quite blurry. making the opacity 0.2 makes it more subtle*/
+  color:white;
+}
+
+.btn:active{ /*when it is being clicked*/
+  transform: translateY(-1px); /*This is moving it from its default START position, not where it is when you're hovering over it, so it will actually appear to go down 2px when you hover then press*/
+  box-shadow: 0 5px 10px rgba(0,0,0,.4); /*We're making it a smaller and less blurry shadow so that it looks like the button had been pushed down*/
+  color:white;
+}
+
+
+
+
 
 @keyframes moveInBottom{
   0%{
