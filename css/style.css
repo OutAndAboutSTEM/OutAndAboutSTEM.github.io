@@ -196,8 +196,8 @@ iframe{
   }
 }
 
-@media only screen and (max-width: 850px){
-  img {
+@media only screen and (max-width: 1050px){
+  #oas {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
