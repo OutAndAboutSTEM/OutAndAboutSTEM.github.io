@@ -175,6 +175,23 @@ iframe{
   color:white;
 }
 
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.footerTbl {
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+
+}
+
 
 
 
