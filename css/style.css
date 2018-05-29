@@ -245,17 +245,12 @@ iframe{
   }
 }
 
-@media only screen and (max-width: 740px){
-  #oas {
-    width: 100px;
-    height: 30px;
-  }
-}
 
 
 
 
-@media only screen and (max-width: 750px){
+
+@media only screen and (max-width: 770px){
   #oas {
     width: 320px;
     height: 100px;
