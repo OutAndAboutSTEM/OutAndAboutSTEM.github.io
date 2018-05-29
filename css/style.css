@@ -247,7 +247,36 @@ iframe{
 
 @media only screen and (max-width: 500px){
   #oas {
-    width: 300px;
-    height: 100px;
+    width: 260px;
+    height: 80px;
   }
+  .header{ /*the part with the yoga image and green overlay*/
+    transform: translate(0%, -40px); /*we use transofrm trnaslate to tell it to shift it 50% of its own height and width so that position absolute will work properly- so this is in realtion to itself and NOT the parent element */
+
+    height: 35vh; /*we want the height of the element to be 50% of the viewport*/
+    background-image: linear-gradient(
+      to right bottom, /*adds a linear gradient on top going left top to right bottom...*/
+      rgba(255, 255, 255, 0.6), /*...specifies the colours and opacity...*/
+      rgba(255, 255, 255, 0.6)),
+      url(../images/colors.jpeg);  /*...and the. url image underneath it peaking through*/
+    background-size: cover;
+    background-position: top; /*background-position: top ensure the top of the background always stays flush with the top of the container, it doesn't disappear when you resize the window*/
+    position: relative; /*this is needed so that the absolute positioning of the logo box will be relative to the header (its parent element)*/
+    clip-path: polygon(0 0, 100% 0, 100% 30vh, 0 100%); /*Clipping a bit of the header off to make it look cool- you're specifying the points you want to show, starting from the top left corner and working clockwise. The first point is 0 0 because those are its co-ordinates in relation to the first point (top-left)*/
+  }
+
+  .inner{
+    height: 25vh; /*we want the height of the element to be 95% of the viewport*/
+    background-image: linear-gradient(
+      to right bottom, /*adds a linear gradient on top going left top to right bottom...*/
+      rgba(255, 255, 255, 1), /*...specifies the colours and opacity...*/
+      rgba(255, 255, 255, 1)),
+      url(../images/colors.jpeg);  /*...and the. url image underneath it peaking through*/
+    background-size: cover;
+    background-position: top; /*background-position: top ensure the top of the background always stays flush with the top of the container, it doesn't disappear when you resize the window*/
+    position: relative; /*this is needed so that the absolute positioning of the logo box will be relative to the header (its parent element)*/
+    clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 100%); /*Clipping a bit of the header off to make it look cool- you're specifying the points you want to show, starting from the top left corner and working clockwise. The first point is 0 0 because those are its co-ordinates in relation to the first point (top-left)*/
+    margin:40px;
+  }
+
 }
