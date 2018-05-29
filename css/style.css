@@ -231,21 +231,23 @@ iframe{
 }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1200px){
   #oas {
-    width: 550px;
+    width: 700px;
     height: 200px;
   }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 800px){
   #oas {
-    width: 400px;
+    width: 500px;
     height: 150px;
   }
 }
 
-@media only screen and (max-width: 550px){
+
+
+@media only screen and (max-width: 650px){
   #oas {
     width: 320px;
     height: 100px;
