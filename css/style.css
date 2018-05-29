@@ -247,17 +247,12 @@ iframe{
 
 @media only screen and (max-width: 650px){
   #oas {
-    width: 400px;
-    height: 120px;
+    width: 250px;
+    height: 70px;
   }
 }
 
-@media only screen and (max-width: 550px){
-  #oas {
-    width: 300px;
-    height: 80px;
-  }
-}
+
 
 
 @media only screen and (max-width: 700px){
