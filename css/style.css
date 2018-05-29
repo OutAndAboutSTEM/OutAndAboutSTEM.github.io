@@ -247,8 +247,8 @@ iframe{
 
 @media only screen and (max-width: 500px){
   #oas {
-    width: 260px;
-    height: 80px;
+    width: 240px;
+    height: 60px;
   }
   .header{ /*the part with the yoga image and green overlay*/
     transform: translate(0%, -40px); /*we use transofrm trnaslate to tell it to shift it 50% of its own height and width so that position absolute will work properly- so this is in realtion to itself and NOT the parent element */
