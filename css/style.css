@@ -80,6 +80,11 @@ iframe{
   margin: 10px 20%;
 }
 
+ul{
+  margin: 10px;
+  margin-left: 30px;
+}
+
 .header{ /*the part with the yoga image and green overlay*/
   transform: translate(0%, -40px); /*we use transofrm trnaslate to tell it to shift it 50% of its own height and width so that position absolute will work properly- so this is in realtion to itself and NOT the parent element */
 
@@ -156,6 +161,17 @@ iframe{
   margin: 20px 0px 20px 0px;
 }
 
+.imagesrow {
+  max-width: 400px;
+    margin: auto;
+}
+
+.thumb {
+  width:100%;
+max-width:200px;
+margin: auto;
+}
+
 .btn-purple{
   background-color: #832fa8;
   color:white;
@@ -191,8 +207,6 @@ iframe{
   margin-right: 3%;
 
 }
-
-
 
 
 
